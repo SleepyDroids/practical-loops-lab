@@ -38,20 +38,29 @@
 // 2. Create a loop that searches for the next prime number, starting at n and incrementing from there.
 // 3. As soon as you find the prime number, log that number and exit the loop.
 
-let n = 3;
+let n;
+// changed it to be interactive with the user  
+n = window.prompt("Enter a number here: ");
 
-// just a little testing with a basic loop
-// for (n = 0; n <= 41; n++) {
-//     console.log(n);
-// }
+// Part 1: create the loop for incrementation
+// Part 2: create a loop that checks for prime number and breaks out of the first loop
+// when it finds the prime number 
 
-// first step - determine if a number is prime or not (true/false - boolean)
-
-for (i = 0; i < 48; i++) {
-    n += i
-    if (n % n == 0) {
-        console.log(n);
-    } else {
-        console.log(`${n} is not a prime number.`);
-    }
+// create a new variable to connect n (the starting point)
+// userPrompt++ for the incrementation (to calculate through the next numbers)
+// true to make it an infinite loop to keep checking through the incrementation
+for (let userPrompt = n; true; userPrompt++) {
+        let checkIfPrime; 
+        // doing outside of the for loop and if else statements since it is a variable that will be used inside both statements
+        // declaring a new variable
+        // starting at 2 to check if the userPrompt is divisible by 2 with no remainder
+        // checkIfPrime will end at the next i that is being incremented by the outer loop
+        for (checkIfPrime = 2; checkIfPrime < userPrompt; checkIfPrime++) {
+            if (userPrompt % checkIfPrime == 0) break; // break out of inner loop, go back to outer loop
+        }
+        // prime numbers are divisible by themselves
+        if (checkIfPrime == userPrompt && userPrompt > 0) {
+            console.log(`${userPrompt} is the next prime number after the initial start of ${n}.`);
+            break; // break out of the outer loop because I found a prime
+        }
 }
