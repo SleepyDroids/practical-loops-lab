@@ -15,18 +15,22 @@
 // If a number is divisible by both 3 and 5, log “Fizz Buzz.”
 // If a number is not divisible by either 3 or 5, log the number.
 
-for (i = 1; i < 101; i++) {
-    console.log(i);
-    if (i % 3 == 0 && i % 5 == 0) {
-        console.log('fizz buzz');
-    } else if (i % 3 == 0) {
-        console.log('fizz');
-    } else if (i % 5 == 0) {
-        console.log('buzz');
-    } else {
-        console.log(i);
-    }
-}
+// function fizzBuzz () {
+//     for (i = 1; i < 101; i++) {
+//         console.log(i);
+//         if (i % 3 == 0 && i % 5 == 0) {
+//             console.log('fizz buzz');
+//         } else if (i % 3 == 0) {
+//             console.log('fizz');
+//         } else if (i % 5 == 0) {
+//             console.log('buzz');
+//         } else {
+//             console.log(i);
+//         }
+//     }
+// }
+
+// fizzBuzz(); 
 
 // PART 2: PRIME NUMBERS
 // Write a script that accomplishes the following:
@@ -34,10 +38,20 @@ for (i = 1; i < 101; i++) {
 // 2. Create a loop that searches for the next prime number, starting at n and incrementing from there.
 // 3. As soon as you find the prime number, log that number and exit the loop.
 
-let n = 22;
+let n = 3;
 
-// just a little testing
+// just a little testing with a basic loop
 // for (n = 0; n <= 41; n++) {
 //     console.log(n);
 // }
 
+// first step - determine if a number is prime or not (true/false - boolean)
+
+for (i = 0; i < 48; i++) {
+    n += i
+    if (n % n == 0) {
+        console.log(n);
+    } else {
+        console.log(`${n} is not a prime number.`);
+    }
+}
