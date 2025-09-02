@@ -50,17 +50,17 @@ n = window.prompt("Enter a number here: ");
 // userPrompt++ for the incrementation (to calculate through the next numbers)
 // true to make it an infinite loop to keep checking through the incrementation
 for (let userPrompt = n; true; userPrompt++) {
+        // declaring a new variable but not assigning it yet
         let checkIfPrime; 
-        // doing outside of the for loop and if else statements since it is a variable that will be used inside both statements
-        // declaring a new variable
+        // doing outside of the for loop and if else statements since it is a variable that will be used inside another loop and a statement
         // starting at 2 to check if the userPrompt is divisible by 2 with no remainder
-        // checkIfPrime will end at the next i that is being incremented by the outer loop
+        // checkIfPrime will end at the next number in order that is being incremented by the outer loop
         for (checkIfPrime = 2; checkIfPrime < userPrompt; checkIfPrime++) {
             if (userPrompt % checkIfPrime == 0) break; // break out of inner loop, go back to outer loop
         }
         // prime numbers are divisible by themselves
         if (checkIfPrime == userPrompt && userPrompt > 0) {
-            console.log(`${userPrompt} is the next prime number after the initial start of ${n}.`);
+            console.log(`${userPrompt} is the next prime number after the initial input of ${n}.`);
             break; // break out of the outer loop because I found a prime
         }
 }
